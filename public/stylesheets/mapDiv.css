@@ -1,0 +1,13 @@
+#map {
+    /* position: fixed; */
+    /* top: 0;
+    bottom: 0; */
+    width: 30em;
+    height: 30em;
+    /* height: 300px;
+    width: 400px; */
+}
+
+.heightNew {
+    height: 30em;
+}

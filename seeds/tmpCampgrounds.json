@@ -1,0 +1,29 @@
+ const c2 = JSON.parse('[
+    {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                68.04367,
+                28.17723
+            ]
+        },
+        "_id": "65ab61b042c6e8502015d559",
+        "title": "Diamond Village",
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/dttt9oyqc/image/upload/v1705665786/YelpCamp/gv0x4e65af0bxaeckkti.jpg",
+                "filename": "YelpCamp/ihyyzyrrrcoimuca2agl",
+                "_id": "65ab61b042c6e8502015d55a"
+            }
+        ],
+        "price": 11,
+        "description": "Lorem ignissimos!",
+        "location": "Usta Muhammad, Pakistan",
+        "author": "653d47c362079c442f625723",
+        "reviews": [],
+        "__v": 0,
+        "properties": {
+            "popUpMarkup": "<a href=\"/campgrounds/65ab61b042c6e8502015d559\">Diamond Village</a>"
+        }
+    }
+]');

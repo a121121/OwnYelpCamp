@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>YelpCamp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/home.css">
+</head>
+
+<body class="d-flex text-center text-white bg-dark" crossorigin="anonymous">
+    <div class="rectangleDiv">
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <header class="mb-auto">
+                <div>
+                    <h3 class="float-md-left mb-0">YelpCamp</h3>
+                    <nav class="nav nav-masthead justify-content-center float-md-right">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="/campgrounds">Campgrounds</a>
+                        <% if(!currentUser) { %>
+                            <a class="nav-link" href="/login">Login</a>
+                            <a class="nav-link" href="/register">Register</a>
+                            <% } else { %>
+                                <a class="nav-link" href="/logout">Logout</a>
+                                <% } %>
+                    </nav>
+                </div>
+            </header>
+            <main class="px-3">
+                <h1>YelpCamp</h1>
+                <p class="lead"> Welcome to YelpCamp! <br> Jump right in and explore our many campgrounds. <br>
+                    Feel free to share some of your own and comment on others!</p>
+                <a href="/campgrounds" class=" button-55">View
+                    Campgrounds</a>
+            </main>
+
+            <footer class="mt-auto text-white-50">
+                <p>&copy; Designed By Abdullah Younas </p>
+            </footer>
+
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const urls=[
+                'https://images.unsplash.com/photo-1559521783-1d1599583485?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
+                'https://images.pexels.com/photos/1061640/pexels-photo-1061640.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                'https://img.freepik.com/free-photo/tent-outdoor-by-night-ai-generated-image_268835-6640.jpg?t=st=1705925865~exp=1705929465~hmac=fa2ca8a76e895d74b576c641bb049bf76329559cb0b3e2d1d4bc2d07e7a52f18&w=996',
+            ];
+
+            let count=0;
+            const body=document.body;
+
+            body.style.backgroundImage='url("'+urls[0]+'")';
+
+            setInterval(function () {
+                body.style.backgroundImage='url("'+urls[count]+'")';
+                count=(count===urls.length-1)? 0:count+1;
+            }, 7500);
+        });
+    </script>
+
+</body>
+
+</html>

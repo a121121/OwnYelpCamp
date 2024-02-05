@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form | Yelp Camp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/loginStyle.css">
+</head>
+
+
+<body class="d-flex text-center text-white bg-dark">
+    <div class="rectangleDiv">
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <header class="mb-auto">
+                <div>
+                    <h3 class="float-md-left mb-0">YelpCamp</h3>
+                    <nav class="nav nav-masthead justify-content-center float-md-right">
+                        <a class="nav-link" aria-current="page" href="/">Home</a>
+                        <a class="nav-link" href="/campgrounds">Campgrounds</a>
+                        <% if(!currentUser) { %>
+                            <a class="nav-link" href="/login">Login</a>
+                            <a class="nav-link active" href="/register">Register</a>
+                            <% } else { %>
+                                <a class="nav-link" href="/logout">Logout</a>
+                                <% } %>
+                    </nav>
+                </div>
+            </header>
+
+            <div class="wrapper slideR mt-auto mx-auto">
+                <form action="/register" method="POST">
+                    <h2>Sign Up!</h2>
+                    <div class="input-field">
+                        <input type="text" id="username" name="username" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="email" id="email" name="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="password" name="password" required>
+                        <label>Enter your password</label>
+                    </div>
+                    <div class="register mb-3 mt-2">
+                        <p>Already a Member? <a href="/login">Login</a></p>
+                    </div>
+                    <button type="submit" class="">Sign Up</button>
+                </form>
+            </div>
+
+            <footer class="mt-auto text-white-50">
+                <p>&copy; Designed By Abdullah Younas </p>
+            </footer>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+    <script src="/javascripts/changingBackground.js"></script>
+</body>
+
+</html>
+
+
+<!-- <div class="">
+        <div class="container right-panel-active">
+          
+            <div class="container__form container--signup">
+                <form action="#" class="form" id="form1">
+                    <h2 class="form__title">Sign Up</h2>
+                    <input type="text" placeholder="User" class="input" />
+                    <input type="email" placeholder="Email" class="input" />
+                    <input type="password" placeholder="Password" class="input" />
+                    <button class="btn">Sign Up</button>
+                </form>
+            </div>
+
+         
+            <div class="container__form container--signin">
+                <form action="#" class="form" id="form2">
+                    <h2 class="form__title">Sign In</h2>
+                    <input type="email" placeholder="Email" class="input" />
+                    <input type="password" placeholder="Password" class="input" />
+                    <a href="#" class="link">Forgot your password?</a>
+                    <button class="btn">Sign In</button>
+                </form>
+            </div>
+
+    
+            <div class="container__overlay">
+                <div class="overlay">
+                    <div class="overlay__panel overlay--left">
+                        <button class="btn" id="signIn">Sign In</button>
+                    </div>
+                    <div class="overlay__panel overlay--right">
+                        <button class="btn" id="signUp">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->

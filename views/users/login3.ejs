@@ -1,0 +1,70 @@
+<% layout('layouts/boilerplate') %>
+    <h1>Login</h1>
+    <form action="/login" method="POST" class="needs-validation" novalidate>
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" name="username" required>
+            <div class="valid-feedback">
+                Perfect!
+            </div>
+        </div>
+        <!-- <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+            <div class="valid-feedback">
+                Perfect!
+            </div>
+        </div> -->
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+            <div class="valid-feedback">
+                Perfect!
+            </div>
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-success">Login</button>
+        </div>
+    </form>
+
+
+
+
+
+    <!-- <div class="">
+        <div class="container right-panel-active">
+          
+            <div class="container__form container--signup">
+                <form action="#" class="form" id="form1">
+                    <h2 class="form__title">Sign Up</h2>
+                    <input type="text" placeholder="User" class="input" />
+                    <input type="email" placeholder="Email" class="input" />
+                    <input type="password" placeholder="Password" class="input" />
+                    <button class="btn">Sign Up</button>
+                </form>
+            </div>
+
+         
+            <div class="container__form container--signin">
+                <form action="#" class="form" id="form2">
+                    <h2 class="form__title">Sign In</h2>
+                    <input type="email" placeholder="Email" class="input" />
+                    <input type="password" placeholder="Password" class="input" />
+                    <a href="#" class="link">Forgot your password?</a>
+                    <button class="btn">Sign In</button>
+                </form>
+            </div>
+
+    
+            <div class="container__overlay">
+                <div class="overlay">
+                    <div class="overlay__panel overlay--left">
+                        <button class="btn" id="signIn">Sign In</button>
+                    </div>
+                    <div class="overlay__panel overlay--right">
+                        <button class="btn" id="signUp">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
